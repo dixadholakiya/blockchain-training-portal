@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { useTraining } from '../../context/TrainingContext.jsx';
 
 const modules = [
+  { key: 'unifiedLab', label: 'Guided Case Lab', path: '/unified-lab', icon: '⚡' },
   { key: 'explorer', label: 'Blockchain Explorer', path: '/explorer', icon: '🔍' },
   { key: 'build', label: 'Build & Verify', path: '/build', icon: '🧱' },
   { key: 'tamper', label: 'Detect Tampering', path: '/tamper', icon: '🛡' },

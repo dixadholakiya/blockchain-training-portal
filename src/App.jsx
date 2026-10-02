@@ -12,6 +12,7 @@ import Applications from './pages/Applications.jsx';
 import InstructorMode from './pages/InstructorMode.jsx';
 import TrainingComplete from './pages/TrainingComplete.jsx';
 import SecurityCaseStudy from './pages/SecurityCaseStudy.jsx';
+import UnifiedLab from './pages/UnifiedLab.jsx';
 import Sidebar from './components/Layout/Sidebar.jsx';
 import { NavLink, useLocation } from 'react-router-dom';
 
@@ -38,6 +39,7 @@ function AppLayout() {
         </div>
         <nav className="header-nav">
           <NavLink to="/" className={({ isActive }) => `header-nav-link ${isActive ? 'active' : ''}`} end>Dashboard</NavLink>
+          <NavLink to="/unified-lab" className={({ isActive }) => `header-nav-link ${isActive ? 'active' : ''}`} style={{ fontWeight: 700, color: 'var(--navy-600)' }}>⚡ Guided Case Lab</NavLink>
           <NavLink to="/security-cases" className={({ isActive }) => `header-nav-link ${isActive ? 'active' : ''}`}>Security Cases</NavLink>
           <NavLink to="/glossary" className={({ isActive }) => `header-nav-link ${isActive ? 'active' : ''}`}>Glossary</NavLink>
           <NavLink to="/applications" className={({ isActive }) => `header-nav-link ${isActive ? 'active' : ''}`}>Applications</NavLink>
@@ -54,6 +56,7 @@ function AppLayout() {
         <main className="app-main">
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/unified-lab" element={<UnifiedLab />} />
             <Route path="/explorer" element={<BlockchainExplorer />} />
             <Route path="/build" element={<BuildBlock />} />
             <Route path="/tamper" element={<TamperDetection />} />

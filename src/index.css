@@ -110,8 +110,16 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 24px; /* Default 1.5x font scale for high-visibility presentation */
   scroll-behavior: smooth;
+}
+
+html[data-font-scale="1.0"] {
+  font-size: 16px;
+}
+
+html[data-font-scale="1.5"] {
+  font-size: 24px;
 }
 
 body {
